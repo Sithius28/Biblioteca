@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h1>Categorías de Libros</h1>
+  <ul class="list-group">
+    {% for categoria in categorias %}
+    <li class="list-group-item">{{ categoria.nombre }} - {{ categoria.descripcion }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

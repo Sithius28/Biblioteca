@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h1>Catálogo de Autores</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Nacionalidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for autor in autores %}
+      <tr>
+        <td>{{ autor.nombre }}</td>
+        <td>{{ autor.nacionalidad }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

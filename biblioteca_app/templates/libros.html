@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h1>Catálogo de Libros</h1>
+
+  <a href="{% url "biblioteca_app:formulario" %}">Agregar Libro</a>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Año de Publicación</th>
+        <th>Descripción</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for libro in libros %}
+      <tr>
+        <td>{{ libro.titulo }}</td>
+        <td>{{ libro.año_publicacion }}</td>
+        <td>{{ libro.descripcion }}</td>
+        <td><a href="{% url 'detalle_libro' libro.id %}" class="btn btn-sm btn-primary">Ver más</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
