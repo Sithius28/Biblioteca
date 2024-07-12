@@ -23,6 +23,8 @@ urlpatterns = [
     
     path('', views.inicio, name="inicio"),
     path('libros/', views.libros, name="libros"),
+    path('autores/', views.autores, name="autores"),
+    path('categorias/', views.categorias, name="categorias"),
     path('admin/', admin.site.urls),
     path('biblioteca_app/', include('biblioteca_app.urls')),
 ]

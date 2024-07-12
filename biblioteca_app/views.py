@@ -6,7 +6,7 @@ from .models import Libro, Autor, Categoria, NavItem
 
 def index(request):
     # Obtener datos necesarios para la página de inicio
-    libros_destacados = Libro.objects.all()[:3]  # Ejemplo: libros destacados para el carousel
+    libros_destacados = Libro.objects.all()[:3] 
     jumbotron_info = {
         'titulo': 'Bienvenido a la biblioteca local online',
         'texto': 'Aquí encontrarás una gran colección de libros para leer y disfrutar.',
